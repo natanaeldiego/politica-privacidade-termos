@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Ônibus SP</title>
+  <style>
+    :root {
+      --primary: #2563EB;
+      --primary-dark: #1D4ED8;
+      --secondary: #22C55E;
+      --accent: #F59E0B;
+      --danger: #EF4444;
+      --bg: #0F172A;
+      --bg-secondary: #1E293B;
+      --bg-tertiary: #334155;
+      --card: #1E293B;
+      --text: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --border: #334155;
+      --max-width: 800px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px 80px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .header .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(37, 99, 235, 0.3);
+      color: var(--primary);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .header .badge svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .header .app-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--secondary);
+      margin-bottom: 12px;
+    }
+
+    .header .meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .header .meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    ul li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      padding: 6px 0;
+      padding-left: 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      background: var(--secondary);
+      border-radius: 50%;
+    }
+
+    .highlight {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.2);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    .highlight.green {
+      background: rgba(34, 197, 94, 0.1);
+      border-color: rgba(34, 197, 94, 0.2);
+    }
+
+    .highlight.green::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 3px;
+      background: var(--secondary);
+      border-radius: 2px;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+
+    table th {
+      background: var(--bg-tertiary);
+      color: var(--text);
+      font-weight: 600;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    table td {
+      color: var(--text-secondary);
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+    }
+
+    table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      color: #fff;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .contact-card p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .contact-card .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 4px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 24px 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 24px;
+    }
+
+    .lgpd-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .toc {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    .toc h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+
+    .toc ol li {
+      counter-increment: toc;
+      padding: 6px 0;
+      font-size: 14px;
+      color: var(--text-secondary);
+    }
+
+    .toc ol li a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .toc ol li a:hover {
+      text-decoration: underline;
+    }
+
+    .toc ol li::before {
+      content: none;
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 12px 60px;
+      }
+
+      .header h1 {
+        font-size: 22px;
+      }
+
+      .section {
+        padding: 18px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="10" rx="2"/>
+          <circle cx="7" cy="20" r="1.5" fill="currentColor"/>
+          <circle cx="17" cy="20" r="1.5" fill="currentColor"/>
+          <path d="M5 11V7a2 2 0 012-2h10a2 2 0 012 2v4"/>
+          <line x1="7" y1="14" x2="17" y2="14"/>
+        </svg>
+        Política de Privacidade
+      </div>
+      <h1>Ônibus SP</h1>
+      <p class="app-name">Transporte Público em Tempo Real</p>
+      <div class="meta">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Última atualização: 20 de março de 2026
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Versão 2.0.0
+        </span>
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h3>Índice</h3>
+      <ol>
+        <li><a href="#introducao">Introdução</a></li>
+        <li><a href="#dados">Informações que Coletamos</a></li>
+        <li><a href="#uso">Como Usamos suas Informações</a></li>
+        <li><a href="#compartilhamento">Compartilhamento de Dados</a></li>
+        <li><a href="#seguranca">Armazenamento e Segurança</a></li>
+        <li><a href="#direitos">Seus Direitos</a></li>
+        <li><a href="#terceiros">Serviços de Terceiros</a></li>
+        <li><a href="#permissoes">Permissões do Aplicativo</a></li>
+        <li><a href="#criancas">Crianças</a></li>
+        <li><a href="#alteracoes">Alterações nesta Política</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ol>
+    </nav>
+
+    <!-- Section 1 -->
+    <section class="section" id="introducao">
+      <div class="section-number">1</div>
+      <h2>Introdução</h2>
+      <p>O aplicativo <strong>Ônibus SP</strong> ("nós", "nosso" ou "app") respeita a sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações pessoais quando você utiliza nosso aplicativo.</p>
+      <p>Ao usar o Ônibus SP, você concorda com as práticas descritas nesta política.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section" id="dados">
+      <div class="section-number">2</div>
+      <h2>Informações que Coletamos</h2>
+
+      <h3 style="font-size:15px; font-weight:600; color:var(--text); margin:20px 0 8px;">2.1. Informações de Localização</h3>
+      <p>Solicitamos permissão para acessar sua <strong>localização aproximada e precisa</strong> do dispositivo para:</p>
+      <ul>
+        <li>Exibir paradas de ônibus próximas à sua posição</li>
+        <li>Mostrar ônibus em tempo real no mapa</li>
+        <li>Calcular distâncias entre você e as paradas</li>
+        <li>Melhorar a precisão das previsões de chegada</li>
+      </ul>
+      <p>A localização é obtida exclusivamente pelo GPS do dispositivo e <strong>nunca é armazenada em nossos servidores</strong>. Não compartilhamos sua localização com terceiros.</p>
+
+      <h3 style="font-size:15px; font-weight:600; color:var(--text); margin:20px 0 8px;">2.2. Dados de Uso da API SPTrans</h3>
+      <p>Nosso app consome dados públicos da <strong>API SPTrans Olho Vivo</strong>, mantida pela São Paulo Transporte S.A. (SPTrans). Esses dados incluem:</p>
+      <ul>
+        <li>Linhas de ônibus e suas rotas</li>
+        <li>Previsões de chegada em tempo real</li>
+        <li>Posição dos ônibus em circulação</li>
+        <li>Paradas de ônibus e seus endereços</li>
+      </ul>
+      <p>Esses dados são de propriedade da SPTrans. Não somos responsáveis pela precisão, disponibilidade ou atualização desses dados.</p>
+
+      <h3 style="font-size:15px; font-weight:600; color:var(--text); margin:20px 0 8px;">2.3. Dados Armazenados Localmente</h3>
+      <p>O app pode armazenar as seguintes informações <strong>localmente no seu dispositivo</strong>:</p>
+      <ul>
+        <li><strong>Tema preferido</strong> (claro/escuro)</li>
+        <li><strong>Linhas e paradas favoritas</strong></li>
+        <li><strong>Histórico de buscas recentes</strong></li>
+      </ul>
+      <p>Esses dados ficam armazenados no armazenamento local do dispositivo e podem ser apagados a qualquer momento pelas configurações do app ou limpando os dados do app.</p>
+
+      <h3 style="font-size:15px; font-weight:600; color:var(--text); margin:20px 0 8px;">2.4. Dados de Navegação</h3>
+      <p>Quando você acessa nosso app, podemos coletar automaticamente:</p>
+      <ul>
+        <li>Endereço IP</li>
+        <li>Tipo de dispositivo e sistema operacional</li>
+        <li>Versão do aplicativo</li>
+        <li>Páginas acessadas e recursos utilizados</li>
+        <li>Data e hora de acesso</li>
+      </ul>
+      <p>Esses dados são coletados de forma anônima e usados exclusivamente para melhoria do serviço e análise de uso.</p>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section" id="uso">
+      <div class="section-number">3</div>
+      <h2>Como Usamos suas Informações</h2>
+      <p>Utilizamos as informações coletadas para:</p>
+      <ul>
+        <li>Fornecer previsões de chegada de ônibus em tempo real</li>
+        <li>Exibir paradas e linhas de ônibus próximas à sua localização</li>
+        <li>Mostrar a posição dos ônibus no mapa</li>
+        <li>Salvar suas preferências (tema, favoritos)</li>
+        <li>Melhorar a experiência e performance do aplicativo</li>
+        <li>Detectar e corrigir problemas técnicos</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section" id="compartilhamento">
+      <div class="section-number">4</div>
+      <h2>Compartilhamento de Dados</h2>
+      <p><strong>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing.</strong></p>
+      <p>Podemos compartilhar dados nos seguintes casos:</p>
+      <ul>
+        <li><strong>Prestadores de serviço:</strong> Compartilhamos dados com fornecedores que nos ajudam a operar o app (hospedagem, análise, mapas), mas apenas na medida necessária para prestar esses serviços.</li>
+        <li><strong>Requisitos legais:</strong> Podemos compartilhar informações se exigido por lei, ordem judicial ou autoridade competente.</li>
+        <li><strong>SPTrans:</strong> Os dados de previsão de ônibus são fornecidos pela API pública da SPTrans, que possui sua própria política de privacidade.</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section class="section" id="seguranca">
+      <div class="section-number">5</div>
+      <h2>Armazenamento e Segurança</h2>
+      <ul>
+        <li>Os dados de localização <strong>nunca são armazenados em servidores</strong>. São usados apenas durante a sessão de uso do app.</li>
+        <li>Os dados salvos localmente (favoritos, tema) ficam no armazenamento do seu dispositivo e são protegidos pelas configurações de segurança do seu celular.</li>
+        <li>Utilizamos conexões seguras (HTTPS) para toda comunicação entre o app e os servidores.</li>
+      </ul>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="section" id="direitos">
+      <div class="section-number">6</div>
+      <h2>Seus Direitos</h2>
+      <p>Você possui os seguintes direitos sobre seus dados:</p>
+      <ul>
+        <li><strong>Acessar</strong> suas informações armazenadas localmente</li>
+        <li><strong>Apagar</strong> seus dados locais (limpando dados do app nas configurações do dispositivo)</li>
+        <li><strong>Revogar</strong> a permissão de localização a qualquer momento pelas configurações do celular</li>
+        <li><strong>Atualizar</strong> suas preferências de tema e favoritos dentro do app</li>
+      </ul>
+      <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato pelo e-mail: <strong>contatodevelopersoftware@gmail.com</strong></p>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="section" id="terceiros">
+      <div class="section-number">7</div>
+      <h2>Serviços de Terceiros</h2>
+      <p>Nosso app utiliza os seguintes serviços de terceiros:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Serviço</th>
+            <th>Finalidade</th>
+            <th>Política de Privacidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Google Maps</strong></td>
+            <td>Exibição de mapas e localização</td>
+            <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--primary);">google.com/policies/privacy</a></td>
+          </tr>
+          <tr>
+            <td><strong>SPTrans Olho Vivo API</strong></td>
+            <td>Dados de ônibus e previsões em tempo real</td>
+            <td><a href="https://www.sptrans.com.br" target="_blank" rel="noopener" style="color:var(--primary);">sptrans.com.br</a></td>
+          </tr>
+          <tr>
+            <td><strong>Expo</strong></td>
+            <td>Plataforma de desenvolvimento do app</td>
+            <td><a href="https://expo.io/privacy" target="_blank" rel="noopener" style="color:var(--primary);">expo.io/privacy</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:12px;">Não somos responsáveis pelas práticas de privacidade de serviços de terceiros. Recomendamos que você leia as políticas de privacidade dessas plataformas.</p>
+    </section>
+
+    <!-- Section 8 -->
+    <section class="section" id="permissoes">
+      <div class="section-number">8</div>
+      <h2>Permissões do Aplicativo</h2>
+      <p>O app solicita as seguintes permissões do dispositivo:</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Permissão</th>
+            <th>Finalidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Localização precisa</strong></td>
+            <td>Exibir paradas e ônibus próximos, calcular distâncias</td>
+          </tr>
+          <tr>
+            <td><strong>Localização aproximada</strong></td>
+            <td>Mesma finalidade da acima, com menor precisão</td>
+          </tr>
+          <tr>
+            <td><strong>Internet</strong></td>
+            <td>Comunicar com a API SPTrans e Google Maps</td>
+          </tr>
+          <tr>
+            <td><strong>Estado da rede</strong></td>
+            <td>Verificar conexão antes de fazer requisições</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 9 -->
+    <section class="section" id="criancas">
+      <div class="section-number">9</div>
+      <h2>Privacidade de Crianças</h2>
+      <p>Este app não é direcionado a crianças menores de 13 anos. Não coletamos intencionalmente informações pessoais de crianças. Se identificarmos coleta inadvertida, removeremos essas informações imediatamente.</p>
+    </section>
+
+    <!-- Section 10 -->
+    <section class="section" id="alteracoes">
+      <div class="section-number">10</div>
+      <h2>Alterações nesta Política</h2>
+      <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando fizermos alterações significativas, notificaremos você publicando a nova política nesta página e atualizando a data de "Última atualização" no topo.</p>
+      <p>Recomendamos que você revise esta política regularmente.</p>
+    </section>
+
+    <!-- Section 11 - Contact -->
+    <section class="section" id="contato">
+      <div class="section-number">11</div>
+      <h2>Contato</h2>
+      <p>Se tiver dúvidas, sugestões ou preocupações sobre esta Política de Privacidade, entre em contato:</p>
+      <div class="contact-card">
+        <h2>Fale Conosco</h2>
+        <p>E-mail para assuntos relacionados à privacidade e proteção de dados:</p>
+        <div class="contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          contatodevelopersoftware@gmail.com
+        </div>
+        <p style="margin-top:12px; font-size:12px; opacity:0.7;">Versão do app: 2.0.0 — Pacote Android: com.developsoftware.onibussp</p>
+        <div class="lgpd-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Em conformidade com a LGPD (Lei nº 13.709/2018)
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Esta Política de Privacidade foi elaborada em conformidade com a</p>
+      <p><strong>Lei Geral de Proteção de Dados Pessoais (LGPD — Lei nº 13.709/2018)</strong></p>
+      <p style="margin-top:8px;">© 2026 Ônibus SP — Todos os direitos reservados.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
